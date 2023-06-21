@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Delete Page</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>   
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+        <style type="text/css">  
+            table {  
+             
+                width: 100%;  
+            }  
+            th, td {  
+                text-align: left;  
+                padding: 8px;  
+            }  
+
+            tr:nth-child(even){background-color: #f2f2f2}  
+            th {  
+                background-color: firebrick;  
+                color: white;  
+            }  
+        
+        </style>  
+    </h:head>
+    <h:body>
+        <header>
+            <nav>
+                <label class="logo" style="color: #f2f2f2;"> <a>All About Feet</a></label>
+                <ul>
+                    <li><a href="MainFrame.xhtml">Home</a></li>
+                    <li><a href="Collection.xhtml">Collection</a></li>
+                    <li><a href="Order.xhtml">Order</a></li>
+                    <li><a href="loginadmin.xhtml">Admin</a></li>    
+                </ul>
+            </nav>
+        </header>
+
+
+        <h:form>
+
+            <div class="main">
+                <article>
+                    <h1><h:outputText style="font-size: 50px" value="DELETE"></h:outputText></h1>
+                    <br></br><br></br>
+                     
+                            Input ID that you want to delete
+                            <br/> <br/> 
+                            
+                            <f:facet name="header">ID</f:facet>
+                            <h:inputText value="#{dataTransaksi.idTransaksi}"></h:inputText>
+                            
+                            <br/>
+                        
+                            <f:facet name="header">Delete</f:facet>  
+                    <h:commandButton action = "#{dataTransaksi.delete()}" value="Delete" class="btn btn-danger">  
+                            </h:commandButton>  
+                        
+                     
+                </article>
+            </div>
+        </h:form>     
+
+        <div class="footer">
+            <div class="inner_footer">
+
+                <div class="third_footer">
+                    <h1> Follow us.</h1>
+                    <li><a href="#"><i class="fa fa-instagram"></i> allaboutfeet </a>  </li>
+                    <li><a href="#"><i class="fa fa-facebook"></i> allaboutfeet</a>  </li>
+                </div>
+                <div class="third_footer2">
+                    <h1> Ask us here. </h1>
+                    <li><a href="#"> allaboutfeet<i class="fa fa-at"></i>gmail.com </a>  </li>
+
+                </div>
+
+            </div>
+        </div>  
+
+    </h:body>
+</html>
+

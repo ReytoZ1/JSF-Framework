@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui">
+    <h:head>
+        <title>Update</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+    </h:head>
+    <h:body>
+        <header>
+  <nav class="header">
+    <label class="logo" > <a href="MainFrame.jsp" style="color: #f2f2f2;"> All About Feet</a></label>
+    <ul>
+    <li><a href="MainFrame.xhtml">Home</a></li>
+    <li><a href="Collection.xhtml">Collection</a></li>
+    <li><a href="Order.xhtml">Order</a></li>
+    <li><a href="loginadmin.xhtml">Admin</a></li>
+    </ul>
+  </nav>
+</header>
+        <div class="main">
+        <div class="row">
+                <div class="col-lg-12 col-lg-updated">
+                    <center>
+                        <article style="width: 40%; margin-bottom: 10mm ">
+                            <h:form styleClass="form-signin" prependId="false">
+                                <br/>
+                                <h:outputLabel style="font-family: Centaur; font-size: 35px">Data Transaksi</h:outputLabel>
+                                <br/><br/>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <h:outputLabel style="font-family: Centaur; font-size: 24px">ID Transaksi</h:outputLabel>
+                                        </td>
+                                        <td widht="5%"></td>
+                                        <td>
+                                            <b:inputText style="font-family: Centaur; font-size: 18px" placeholder="Masukan ID Dicari" value="#{dataTransaksi.idTransaksi}"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <center>
+                                                <b:commandButton look="primary btn-success" value="Cari Data Transaksi" icon="search" action="#{dataTransaksi.getbyid}"/>
+                                            </center>
+                                            <br/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><h:outputLabel style="font-family: Centaur; font-size: 24px">Nama</h:outputLabel></td>
+                                        <td></td>
+                                        <td><b:inputText style="font-family: Centaur; font-size: 18px" value="#{dataTransaksi.namaLengkap}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h:outputLabel style="font-family: Centaur; font-size: 24px">Alamat</h:outputLabel></td>
+                                        <td></td>
+                                        <td><b:inputText style="font-family: Centaur; font-size: 18px" value="#{dataTransaksi.alamatLengkap}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h:outputLabel style="font-family: Centaur; font-size: 24px">email</h:outputLabel></td>
+                                        <td></td>
+                                        <td><b:inputText style="font-family: Centaur; font-size: 18px" value="#{dataTransaksi.email}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h:outputLabel style="font-family: Centaur; font-size: 24px">Telepon</h:outputLabel></td>
+                                        <td></td>
+                                        <td><b:inputText style="font-family: Centaur; font-size: 18px" value="#{dataTransaksi.noTelp}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h:outputLabel style="font-family: Centaur; font-size: 24px">Kode</h:outputLabel></td>
+                                        <td></td>
+                                        <td><b:inputText style="font-family: Centaur; font-size: 18px" value="#{dataTransaksi.kodeBarang}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h:outputLabel style="font-family: Centaur; font-size: 24px">Pembayaran</h:outputLabel></td>
+                                        <td></td>
+                                        <td><b:inputText style="font-family: Centaur; font-size: 18px" value="#{dataTransaksi.jnsPembayaran}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h:outputLabel style="font-family: Centaur; font-size: 24px">Pengiriman</h:outputLabel></td>
+                                        <td></td>
+                                        <td><b:inputText style="font-family: Centaur; font-size: 18px" value="#{dataTransaksi.jnsPengiriman}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h:outputLabel style="font-family: Centaur; font-size: 24px">Ukuran</h:outputLabel></td>
+                                        <td></td>
+                                        <td><b:inputText style="font-family: Centaur; font-size: 18px" value="#{dataTransaksi.ukuran}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h:outputLabel style="font-family: Centaur; font-size: 24px">Jumlah</h:outputLabel></td>
+                                        <td></td>
+                                        <td><b:inputText style="font-family: Centaur; font-size: 18px" value="#{dataTransaksi.jumlah}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">
+                                            <center>
+                                                <b:commandButton look="primary btn-success" value="UBAH" icon="edit" action="#{dataTransaksi.update()}"/>
+                                                <br/>
+                                            </center>
+                                            <div class="Click">
+                                           <a href="view_admin.xhtml"><code>Back</code></a>
+                                       </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </h:form>
+                        </article>
+                    </center>
+                </div>
+            </div>
+            </div>
+        <div class="footer">
+      <div class="inner_footer">
+        
+        <div class="third_footer">
+          <h1> Follow us.</h1>
+          <li><a href="#"><i class="fa fa-instagram"></i> allaboutfeet </a>  </li>
+          <li><a href="#"><i class="fa fa-facebook"></i> allaboutfeet</a>  </li>
+        </div>
+        <div class="third_footer2">
+          <h1> Ask us here. </h1>
+          <li><a href="#"> allaboutfeet<i class="fa fa-at"></i>gmail.com </a>  </li>
+           
+        </div>
+
+      </div>
+  </div>
+    </h:body>
+</html>
+

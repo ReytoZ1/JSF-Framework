@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:b="http://bootsfaces.net/ui">
+    <h:head>
+        <title>Order</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>   
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    </h:head>
+    <h:body>
+        <header>
+            <nav>
+                <label class="logo"><a href="MainFrame.xhtml" style="color:#f2f2f2 ">All About Feet</a></label>
+                <ul>
+                    <li><a href="MainFrame.xhtml">Home</a></li>
+                    <li><a href="Collection.xhtml">Collection</a></li>
+                    <li><a href="Order.xhtml">Order</a></li>
+                    <li><a href="loginadmin.xhtml">Admin</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="main">
+            <article class="order-form">
+                <h:form styleClass="form-sigin" prependId="false">
+                    <h2 class="form-signin-heading" style="font-weight: bolder">Silahkan Order</h2>
+                    <table style="width: 100%">
+                    
+                    <tr>
+                            <td>
+                                Nama Lengkap :
+                            </td>
+                            <td>
+                                <b:inputText required="true" value="#{dataTransaksi.namaLengkap}"
+                                             required-message="Nama Tidak Boleh Kosong" placeholder="Masukan Nama"/>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Alamat :
+                            </td>
+                            <td>
+                                <b:inputTextarea required="true" required-message="Alamat Tidak Boleh Kosong" 
+                                                 value="#{dataTransaksi.alamatLengkap}" placeholder="Masukan Alamat"/>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Email :
+                            </td>
+                            <td>
+                                <b:inputText required="true" required-message="Email Tidak Boleh Kosong" 
+                                             value="#{dataTransaksi.email}" placeholder="Masukan Email"/>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                No Telp :
+                            </td>
+                            <td>
+                                <b:inputText required="true" required-message="Nomor Tidak Boleh Kosong" 
+                                             value="#{dataTransaksi.noTelp}" placeholder="Masukan Telp"/>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Order by Code :
+                            </td>
+                            <td>
+                                <b:inputText required="true" required-message="Kode Tidak Boleh Kosong" 
+                                             value="#{dataTransaksi.kodeBarang}" placeholder="Masukan Kode Yang Ingin Anda Beli"/>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Jenis Pembayaran :
+                            </td>
+                            <td>
+                                <b:inputText required="true" required-message="Jenis Pembayaran Tidak Boleh Kosong" 
+                                             value="#{dataTransaksi.jnsPembayaran}" placeholder="COD / Transfer ke(00871225635 BCA)">  </b:inputText>                  
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Jenis Pengiriman :
+                            </td>
+                            <td>
+                                <b:inputText required="true" required-message="Jenis Pengiriman Tidak Boleh Kosong"
+                                             value="#{dataTransaksi.jnsPengiriman}" placeholder="Reguler / Premium (+10.000)">                                         
+                                </b:inputText>                 
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Ukuran :
+                            </td>
+                            <td>
+                                <b:inputText required="true" type="number" value="#{dataTransaksi.ukuran}" placeholder="Masukan Size"></b:inputText>                 
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Jumlah :
+                            </td>
+                            <td>
+                                <b:inputText required="true" type="number" value="#{dataTransaksi.jumlah}" placeholder="jumlah" ></b:inputText>                
+
+                            </td>
+                        </tr><br/>
+                    <center>
+                       
+                    </center>
+                    
+                    <br/>
+                    </table> <b:commandButton look="primary btn-success" value="Place Order.." icon="insert" action="#{dataTransaksi.save()}"/>
+                </h:form>
+            </article>
+        </div>
+        <ui:include src="Template_include.xhtml"/>
+    </h:body>
+</html>

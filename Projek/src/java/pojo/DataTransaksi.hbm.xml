@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 21, 2020 2:10:12 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.DataTransaksi" table="data_transaksi" catalog="projek5" optimistic-lock="version">
+        <id name="idTransaksi" type="int">
+            <column name="id_transaksi" length="11" />
+            <generator class="assigned" />
+        </id>
+        <property name="namaLengkap" type="string">
+            <column name="`nama lengkap`" length="55" not-null="true" />
+        </property>
+        <property name="alamatLengkap" type="string">
+            <column name="`alamat lengkap`" length="65535" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="25" not-null="true" />
+        </property>
+        <property name="noTelp" type="string">
+            <column name="no_telp" length="12" not-null="true" />
+        </property>
+        <property name="kodeBarang" type="string">
+            <column name="kode_barang" length="2" not-null="true" />
+        </property>
+        <property name="jnsPembayaran" type="string">
+            <column name="jns_pembayaran" length="55" not-null="true" />
+        </property>
+        <property name="jnsPengiriman" type="string">
+            <column name="jns_pengiriman" length="55" not-null="true" />
+        </property>
+        <property name="ukuran" type="string">
+            <column name="ukuran" length="3" not-null="true" />
+        </property>
+        <property name="jumlah" type="int">
+            <column name="jumlah" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 21, 2020 2:10:12 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.DataAdmin" table="data_admin" catalog="projek5" optimistic-lock="version">
+        <id name="idAdmin" type="java.lang.Integer">
+            <column name="id_admin" />
+            <generator class="identity" />
+        </id>
+        <property name="username" type="string">
+            <column name="username" length="55" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="55" not-null="true" />
+        </property>
+        <property name="role" type="string">
+            <column name="role" length="15" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
